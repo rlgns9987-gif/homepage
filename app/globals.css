@@ -2407,3 +2407,10 @@ body {
     padding: 12px 24px;
   }
 }
+
+/* 후기 카드 Link 스타일 */
+.review-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}

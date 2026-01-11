@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatButton from '@/components/ChatButton'
+import Link from 'next/link'
 
 export default function ReviewsPage() {
   const reviews = [
@@ -190,7 +191,7 @@ export default function ReviewsPage() {
           <div className="container">
             <div className="reviews-masonry">
               {allReviews.map((review, index) => (
-                <div key={index} className="review-item">
+                <Link href="/reviews/detail" key={index} className="review-item">
                   <div className="review-thumbnail-kakao">
                     <img src={`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 500'%3E%3Crect fill='%23${index % 3 === 0 ? 'FFE066' : index % 3 === 1 ? 'B4E7FF' : 'E5E5E5'}' width='400' height='500'/%3E%3Ctext x='50%25' y='30%25' font-size='16' text-anchor='middle' fill='%23333'%3E착한학점연구소%3C/text%3E%3Ctext x='50%25' y='50%25' font-size='14' text-anchor='middle' fill='%23666'%3E${review.title.substring(0, 15)}...%3C/text%3E%3C/svg%3E`} alt={review.title} />
                   </div>
@@ -215,7 +216,7 @@ export default function ReviewsPage() {
                       <span className="review-date">{review.date.substring(5)} 조회 {review.views}</span>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
 

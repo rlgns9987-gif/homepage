@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ChatButton from '@/components/ChatButton'
+import Link from 'next/link'
 
 export default function ReviewDetailPage() {
   return (
@@ -129,7 +130,9 @@ export default function ReviewDetailPage() {
 
             {/* 목록 버튼 */}
             <div className="back-to-list">
-              <button className="btn-list">목록</button>
+              <Link href="/reviews">
+                <button className="btn-list">목록</button>
+              </Link>
             </div>
           </div>
         </section>
